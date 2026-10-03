@@ -117,6 +117,23 @@ footer{padding:36px 22px;text-align:center;color:var(--mut);font-size:14px}foote
 @media(hover:hover) and (pointer:fine){#cta{display:inline-block}}
 @media(max-width:760px){nav .l,nav>.btn{display:none}#burger{display:block}nav.o .l{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#0a0807;padding:20px}.qz,.mb{grid-template-columns:1fr}#hero{height:auto;min-height:100svh;display:flex;flex-direction:column;background:var(--bg)}#hero:after{display:none}.ht{position:relative;order:1;top:auto;padding-top:calc(76px + env(safe-area-inset-top,0px))}.ht p{max-width:none}.vw{position:relative;inset:auto;order:2;height:46svh;margin:6px 0;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}.vw video{transform:scale(1.04)}.hb{position:relative;order:3;bottom:auto;padding:4px 0 22px}.hb .wrap{flex-direction:column;align-items:flex-start}.hb .info{text-align:left;margin-top:6px}}
 @media(prefers-reduced-motion:reduce){*:not(#intro):not(#intro *){animation:none!important;transition:none!important}.fx{opacity:1;transform:none}}
+
+/* ===== ajustes so para telas menores (desktop nao e afetado) ===== */
+@media(max-width:900px){nav .l,nav>.btn{display:none}#burger{display:block;min-height:44px;padding:0 14px}nav.o .l{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#0a0807;padding:6px 20px 14px}nav.o .l a{padding:14px 0;font-size:19px;border-bottom:1px solid #ffffff1a}html{overflow-x:hidden}.fx.l:not(.in),.fx.r:not(.in){transform:translateY(40px)}}
+@media(max-width:760px){
+button,a{touch-action:manipulation}.wrap{padding:0 18px}section{padding:56px 0}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.walker{width:96vw}.ilogo{bottom:16%;width:min(200px,46vw)}
+.ht h1{font-size:clamp(44px,13vw,64px)}.hb .btns{width:100%}.hb .btns .btn{flex:1;padding:14px 8px;font-size:19px}
+#fome{padding:56px 0}#fome h2{font-size:clamp(48px,14vw,80px)}#fome p{font-size:18px}
+.top{margin-bottom:26px}#grid{gap:20px}.card .im{aspect-ratio:16/11}.card .bd{padding:18px}.card .pr .btn{min-height:48px;padding:0 24px}
+#modal{place-items:end center;padding:0}.mb{border-radius:24px 24px 0 0;max-height:92dvh;animation:sheet .25s}.mb img{min-height:0;height:210px}.mb .t{padding:20px 20px calc(24px + env(safe-area-inset-bottom,0px))}.mb h3{font-size:38px}#mc{min-height:44px;padding:0 8px}.qty button{width:48px;height:48px}.mb .btn{width:100%}@keyframes sheet{from{transform:translateY(40px);opacity:0}}
+.stage{max-width:240px;margin:0 auto}.opts button{padding:14px 6px;font-size:22px;min-height:56px}.res h3{font-size:34px}.res .btn{width:100%;margin-top:10px}
+#como .st{grid-template-columns:62px 1fr;padding:20px 0}#como .n{font-size:54px}#hd{max-width:340px}
+.cols{gap:30px}.cols h3{font-size:34px}.cols .btn{display:flex;width:100%;margin:0 0 10px}
+#final h2{font-size:clamp(42px,12vw,64px)}#final .btn{width:100%}footer{padding:28px 18px 40px}
+#drawer{width:100%;top:0;bottom:auto;height:100dvh;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px))}.q button{width:44px;height:44px}.x{height:44px;width:auto;padding:0 6px}.it{padding:12px 0}#wa{font-size:21px;padding:18px 10px}
+#bar .btn,#cb{min-height:50px}#cb{font-size:16px}#toast{bottom:calc(84px + env(safe-area-inset-bottom,0px));font-size:18px;max-width:90vw;text-align:center}}
 </style></head><body class="cc">
 <div id="intro" aria-hidden="true"><svg class="walker" viewBox="0 0 320 200"><ellipse cx="180" cy="186" rx="130" ry="7" fill="#fff1"/>
 <g stroke-linecap="round"><path class="leg" d="M66 150v34" stroke="#2a2a2a" stroke-width="13"/><path class="leg" d="M90 150v34" stroke="#2a2a2a" stroke-width="13" style="animation-direction:alternate-reverse"/>
@@ -153,7 +170,7 @@ footer{padding:36px 22px;text-align:center;color:var(--mut);font-size:14px}foote
 <section id="local"><div class="wrap cols">
 <div class="fx up"><h3>Funcionamento</h3><div class="stat" id="stat" data-st><i></i><span>...</span></div><div class="big2">18h00<br>às 22h30</div><p>Segunda a sexta</p></div>
 <div class="fx up"><h3>Entregamos</h3><p>Peça pelo site e finalize no WhatsApp para combinar a entrega.</p><a class="btn" href="#cardapio">Pedir agora</a></div>
-<div class="fx up"><h3>Localização</h3><p>Ademar de Barros, próximo ao Colégio Lighthouse</p><a class="btn ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/8qRJ6T1ajV5TaZ1ud9">Ver localização</a> <button class="btn ghost" id="cp" style="margin-top:8px">Copiar endereço</button></div>
+<div class="fx up"><h3>Localização</h3><p>Ademar de Barros, próximo ao Colégio Lighthouse</p><a class="btn ghost" id="loc" target="_blank" rel="noopener" href="https://maps.app.goo.gl/8qRJ6T1ajV5TaZ1ud9">Ver localização</a> <button class="btn ghost" id="cp" style="margin-top:8px">Copiar endereço</button></div>
 <div class="fx up" id="insta"><h3>@juca_.food</h3><p>Siga o Juca no Instagram.</p><a class="btn ghost" target="_blank" rel="noopener" href="https://www.instagram.com/juca_.food/">Ver Instagram</a></div></div></section>
 
 <section id="final"><div class="wrap"><h2>Seu Juca está te esperando.</h2><a class="btn" href="#cardapio">Pedir agora</a></div></section>
@@ -243,4 +260,9 @@ if(matchMedia("(hover:hover) and (pointer:fine)").matches){const c=$("#cur"),hw=
 // surpresa: clicar na logo do rodapé solta uma chuva de hot dogs
 $("#flogo").onclick=e=>{for(let i=0;i<14;i++){const h=document.createElement("div");h.textContent="🌭";h.style.cssText=`position:fixed;z-index:150;left:${Math.random()*100}vw;top:-40px;font-size:${24+Math.random()*28}px;pointer-events:none`;document.body.appendChild(h);h.animate([{transform:"translateY(0) rotate(0)"},{transform:`translateY(${innerHeight+80}px) rotate(${Math.random()*540}deg)`}],{duration:1400+Math.random()*1200,delay:i*70,easing:"ease-in",fill:"backwards"}).onfinish=()=>h.remove()}};
 addEventListener("keydown",e=>{if(e.key=="Escape")closeD()});
+// localizacao: tenta nova aba; se a pagina estiver em iframe que bloqueia popup, tenta a aba principal; por fim copia o link
+$("#loc").addEventListener("click",e=>{e.preventDefault();const u=e.currentTarget.href;let w=null;try{w=window.open(u,"_blank")}catch(x){}
+ if(w){try{w.opener=null}catch(x){}return}
+ try{window.top.location.href=u;return}catch(x){}
+ try{navigator.clipboard.writeText(u).then(()=>toast("Link do mapa copiado"),()=>toast("Não foi possível abrir o mapa"))}catch(x){toast("Não foi possível abrir o mapa")}});
 </script></body></html>
